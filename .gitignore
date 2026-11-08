@@ -6,3 +6,4 @@ venv/
 *.mp4
 *.mov
 *.zip
+.vscode/
