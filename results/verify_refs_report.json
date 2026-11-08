@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-11-08T17:40:05.585366+00:00",
+  "verified_at": "2026-11-08T19:20:00.830585+00:00",
   "tasks": {
     "task_01": {
       "task_id": "task_01",
@@ -54,7 +54,7 @@
         "edge_case_1_boundary": "PASS: Fatal non-retryable error correctly rolled back sub-batch and allowed next sub-batch to proceed.",
         "edge_case_2_recovery": "PASS: Retryable errors retried successfully within budget and rolled back on exhaustion.",
         "concurrency_race_safety": "PASS: Strict reverse-order (LIFO) atomic rollback order verified.",
-        "invariant_stress_test": "PASS: Sliding window rate limit strictly enforced (elapsed 1.015s >= 0.95s)."
+        "invariant_stress_test": "PASS: Sliding window rate limit strictly enforced (elapsed 1.016s >= 0.95s)."
       },
       "passed": true
     },
@@ -73,7 +73,7 @@
         "edge_case_1_boundary": "PASS: Transaction rollback atomicity and batch limits strictly verified.",
         "edge_case_2_recovery": "PASS: Non-blocking cross-aggregate isolation and poison-pill DLQ unblocking verified.",
         "concurrency_race_safety": "PASS: 10 concurrent worker threads relayed 30 events with zero duplicates and strict per-aggregate FIFO order.",
-        "invariant_stress_test": "PASS: Stress invariant held: 58 published + 2 in DLQ = 60 total transactions."
+        "invariant_stress_test": "PASS: Stress invariant held: 59 published + 1 in DLQ = 60 total transactions."
       },
       "passed": true
     },
