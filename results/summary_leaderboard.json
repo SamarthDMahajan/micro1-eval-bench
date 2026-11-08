@@ -1,0 +1,370 @@
+{
+  "nvidia/nemotron-3.5-lightning:free": {
+    "model": "nvidia/nemotron-3.5-lightning:free",
+    "evaluated_at": "2026-11-08T16:47:09.915365+00:00",
+    "temperature": 0.0,
+    "task_scores": {
+      "task_01": {
+        "task_id": "task_01",
+        "total_score": 0.0,
+        "sub_scores": {
+          "happy_path": 0.0,
+          "edge_case_1_boundary": 0.0,
+          "edge_case_2_recovery": 0.0,
+          "concurrency_race_safety": 0.0,
+          "invariant_stress_test": 0.0
+        },
+        "feedback": {
+          "happy_path": "ERROR: Exception during happy_path: AttributeError: 'NoneType' object has no attribute 'get'\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_01.py\", line 23, in test_happy_path\n    if r1.get(\"status\") != \"APPLIED\":\n       ^^^^^^\nAttributeError: 'NoneType' object has no attribute 'get'\n",
+          "edge_case_1_boundary": "ERROR: Exception during edge_case_1_boundary: AttributeError: 'NoneType' object has no attribute 'get'\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_01.py\", line 55, in test_edge_case_1_boundary\n    if r.get(\"status\") != \"INVALID\" or r.get(\"current_state\") is not None or r.get(\"applied_version\") is not None:\n       ^^^^^\nAttributeError: 'NoneType' object has no attribute 'get'\n",
+          "edge_case_2_recovery": "ERROR: Exception during edge_case_2_recovery: AttributeError: 'NoneType' object has no attribute 'get'\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_01.py\", line 104, in test_edge_case_2_recovery\n    if r1.get(\"status\") != \"APPLIED\":\n       ^^^^^^\nAttributeError: 'NoneType' object has no attribute 'get'\n",
+          "concurrency_race_safety": "FAIL: Expected exactly 1 APPLIED in concurrency race, got 0",
+          "invariant_stress_test": "FAIL: Expected 100 responses, got 0"
+        },
+        "passed": false
+      },
+      "task_02": {
+        "task_id": "task_02",
+        "total_score": 0.0,
+        "sub_scores": {
+          "happy_path": 0.0,
+          "edge_case_1_boundary": 0.0,
+          "edge_case_2_recovery": 0.0,
+          "concurrency_race_safety": 0.0,
+          "invariant_stress_test": 0.0
+        },
+        "feedback": {
+          "happy_path": "ERROR: Exception during happy_path: AttributeError: 'NoneType' object has no attribute 'get'\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_02.py\", line 16, in test_happy_path\n    if not r1.get(\"granted\") or r1.get(\"fencing_token\") != 1 or r1.get(\"expires_at_ms\") != 1100:\n           ^^^^^^\nAttributeError: 'NoneType' object has no attribute 'get'\n",
+          "edge_case_1_boundary": "ERROR: Exception during edge_case_1_boundary: AttributeError: 'NoneType' object has no attribute 'get'\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_02.py\", line 49, in test_edge_case_1_boundary\n    tok1 = a1.get(\"fencing_token\")\n           ^^^^^^\nAttributeError: 'NoneType' object has no attribute 'get'\n",
+          "edge_case_2_recovery": "ERROR: Exception during edge_case_2_recovery: AttributeError: 'NoneType' object has no attribute 'get'\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_02.py\", line 99, in test_edge_case_2_recovery\n    t1 = a1.get(\"fencing_token\")\n         ^^^^^^\nAttributeError: 'NoneType' object has no attribute 'get'\n",
+          "concurrency_race_safety": "ERROR: Exception during concurrency_race_safety: AttributeError: 'NoneType' object has no attribute 'get'\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_02.py\", line 137, in test_concurrency_race_safety\n    t0 = a0.get(\"fencing_token\")\n         ^^^^^^\nAttributeError: 'NoneType' object has no attribute 'get'\n",
+          "invariant_stress_test": "ERROR: Exception during invariant_stress_test: AttributeError: 'NoneType' object has no attribute 'get'\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_02.py\", line 183, in test_invariant_stress_test\n    if res.get(\"granted\"):\n       ^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'get'\n"
+        },
+        "passed": false
+      },
+      "task_03": {
+        "task_id": "task_03",
+        "total_score": 0.0,
+        "sub_scores": {},
+        "feedback": {
+          "import_or_syntax_error": "expected an indented block after 'for' statement on line 84 (<string>, line 89)"
+        },
+        "passed": false
+      },
+      "task_04": {
+        "task_id": "task_04",
+        "total_score": 0.0,
+        "sub_scores": {},
+        "feedback": {
+          "import_or_syntax_error": "unterminated string literal (detected at line 18) (<string>, line 18)"
+        },
+        "passed": false
+      },
+      "task_05": {
+        "task_id": "task_05",
+        "total_score": 0.0,
+        "sub_scores": {},
+        "feedback": {
+          "import_or_syntax_error": "unterminated string literal (detected at line 5) (<string>, line 5)"
+        },
+        "passed": false
+      },
+      "task_06": {
+        "task_id": "task_06",
+        "total_score": 0.0,
+        "sub_scores": {},
+        "feedback": {
+          "import_or_syntax_error": "unterminated string literal (detected at line 5) (<string>, line 5)"
+        },
+        "passed": false
+      }
+    },
+    "average_score": 0.0
+  },
+  "openrouter/free": {
+    "model": "openrouter/free",
+    "evaluated_at": "2026-11-08T12:37:36.000000+00:00",
+    "temperature": 0.0,
+    "task_scores": {
+      "task_01": {
+        "task_id": "task_01",
+        "total_score": 0.8,
+        "sub_scores": {
+          "happy_path": 0.15,
+          "edge_case_1_boundary": 0.0,
+          "edge_case_2_recovery": 0.2,
+          "concurrency_race_safety": 0.25,
+          "invariant_stress_test": 0.2
+        },
+        "feedback": {
+          "happy_path": "PASS: Sequential events applied cleanly with correct state and version tracking.",
+          "edge_case_1_boundary": "FAIL: Failed to reject whitespace idempotency_key",
+          "edge_case_2_recovery": "PASS: Causal out-of-order recovery and tie-breaking verified.",
+          "concurrency_race_safety": "PASS: 30-thread race barrier executed safely: exactly 1 APPLIED, 29 DUPLICATE.",
+          "invariant_stress_test": "PASS: 100-event multi-entity stress test invariant held: final state matches highest (ts, ver) payload."
+        },
+        "passed": false
+      },
+      "task_02": {
+        "task_id": "task_02",
+        "total_score": 0.8,
+        "sub_scores": {
+          "happy_path": 0.15,
+          "edge_case_1_boundary": 0.2,
+          "edge_case_2_recovery": 0.2,
+          "concurrency_race_safety": 0.25,
+          "invariant_stress_test": 0.0
+        },
+        "feedback": {
+          "happy_path": "PASS: Acquire, write, read, renew, and release succeeded in happy path.",
+          "edge_case_1_boundary": "PASS: Boundary conditions, argument validation, and expiration semantics verified.",
+          "edge_case_2_recovery": "PASS: Zombie writes from pre-empted tokens permanently fenced off and rejected.",
+          "concurrency_race_safety": "PASS: 20-thread barrier race at expiry boundary produced exactly 1 winner with monotonic token.",
+          "invariant_stress_test": "FAIL: Monotonicity invariant violated: token[0]=1 >= token[1]=1"
+        },
+        "passed": false
+      },
+      "task_03": {
+        "task_id": "task_03",
+        "total_score": 0.2,
+        "sub_scores": {
+          "happy_path": 0.0,
+          "edge_case_1_boundary": 0.0,
+          "edge_case_2_recovery": 0.0,
+          "concurrency_race_safety": 0.0,
+          "invariant_stress_test": 0.2
+        },
+        "feedback": {
+          "happy_path": "FAIL: Unexpected committed_items: ['item_0', 'item_1', 'item_0', 'item_1', 'item_2', 'item_3', 'item_2', 'item_3', 'item_4', 'item_5', 'item_4', 'item_5']",
+          "edge_case_1_boundary": "FAIL: Expected ['ROLLED_BACK', 'COMMITTED'], got ['COMMITTED', 'COMMITTED']",
+          "edge_case_2_recovery": "FAIL: Item failed to commit after retryable recovery",
+          "concurrency_race_safety": "FAIL: Strict LIFO rollback violated: expected ['item_2', 'item_1', 'item_0'], got []",
+          "invariant_stress_test": "PASS: Sliding window rate limit strictly enforced (elapsed 1.000s >= 0.95s)."
+        },
+        "passed": false
+      },
+      "task_04": {
+        "task_id": "task_04",
+        "total_score": 1.0,
+        "sub_scores": {
+          "happy_path": 0.15,
+          "edge_case_1_boundary": 0.2,
+          "edge_case_2_recovery": 0.2,
+          "concurrency_race_safety": 0.25,
+          "invariant_stress_test": 0.2
+        },
+        "feedback": {
+          "happy_path": "PASS: Transactions and outbox relay executed successfully in happy path.",
+          "edge_case_1_boundary": "PASS: Transaction rollback atomicity and batch limits strictly verified.",
+          "edge_case_2_recovery": "PASS: Non-blocking cross-aggregate isolation and poison-pill DLQ unblocking verified.",
+          "concurrency_race_safety": "PASS: 10 concurrent worker threads relayed 30 events with zero duplicates and strict per-aggregate FIFO order.",
+          "invariant_stress_test": "PASS: Stress invariant held: 59 published + 1 in DLQ = 60 total transactions."
+        },
+        "passed": true
+      },
+      "task_05": {
+        "task_id": "task_05",
+        "total_score": 1.0,
+        "sub_scores": {
+          "happy_path": 0.15,
+          "edge_case_1_boundary": 0.2,
+          "edge_case_2_recovery": 0.2,
+          "concurrency_race_safety": 0.25,
+          "invariant_stress_test": 0.2
+        },
+        "feedback": {
+          "happy_path": "PASS: Standard capacity successfully allocated under sliding window.",
+          "edge_case_1_boundary": "PASS: Clock skew clamping and per-client monotonic timestamp enforcement verified.",
+          "edge_case_2_recovery": "PASS: Burst borrowing and subsequent window repayment penalty verified.",
+          "concurrency_race_safety": "PASS: 40-thread concurrency race strictly respected limit + max_burst_borrow with zero over-admission.",
+          "invariant_stress_test": "PASS: Multi-client sliding window capacity invariant held across all client streams."
+        },
+        "passed": true
+      },
+      "task_06": {
+        "task_id": "task_06",
+        "total_score": 0.0,
+        "sub_scores": {},
+        "feedback": {
+          "import_or_syntax_error": "unterminated string literal (detected at line 2) (<string>, line 2)"
+        },
+        "passed": false
+      }
+    },
+    "average_score": 0.6333
+  },
+  "cohere/north-mini-code:free": {
+    "model": "cohere/north-mini-code:free",
+    "evaluated_at": "2026-11-08T12:38:27.882573+00:00",
+    "temperature": 0.0,
+    "task_scores": {
+      "task_01": {
+        "task_id": "task_01",
+        "total_score": 0.0,
+        "sub_scores": {},
+        "feedback": {
+          "import_or_syntax_error": "unterminated string literal (detected at line 13) (<string>, line 13)"
+        },
+        "passed": false
+      },
+      "task_02": {
+        "task_id": "task_02",
+        "total_score": 0.0,
+        "sub_scores": {},
+        "feedback": {
+          "import_or_syntax_error": "unterminated string literal (detected at line 25) (<string>, line 25)"
+        },
+        "passed": false
+      },
+      "task_03": {
+        "task_id": "task_03",
+        "total_score": 0.0,
+        "sub_scores": {},
+        "feedback": {
+          "import_or_syntax_error": "unterminated string literal (detected at line 16) (<string>, line 16)"
+        },
+        "passed": false
+      },
+      "task_04": {
+        "task_id": "task_04",
+        "total_score": 0.0,
+        "sub_scores": {},
+        "feedback": {
+          "import_or_syntax_error": "unterminated string literal (detected at line 1) (<string>, line 1)"
+        },
+        "passed": false
+      },
+      "task_05": {
+        "task_id": "task_05",
+        "total_score": 0.0,
+        "sub_scores": {},
+        "feedback": {
+          "import_or_syntax_error": "unterminated string literal (detected at line 1) (<string>, line 1)"
+        },
+        "passed": false
+      },
+      "task_06": {
+        "task_id": "task_06",
+        "total_score": 0.0,
+        "sub_scores": {},
+        "feedback": {
+          "import_or_syntax_error": "unterminated string literal (detected at line 5) (<string>, line 5)"
+        },
+        "passed": false
+      }
+    },
+    "average_score": 0.0
+  },
+  "liquid/lfm-2.5-2.6b:free": {
+    "model": "liquid/lfm-2.5-2.6b:free",
+    "evaluated_at": "2026-11-08T16:25:13.249480+00:00",
+    "temperature": 0.0,
+    "task_scores": {
+      "task_01": {
+        "task_id": "task_01",
+        "total_score": 0.4,
+        "sub_scores": {
+          "happy_path": 0.15,
+          "edge_case_1_boundary": 0.0,
+          "edge_case_2_recovery": 0.0,
+          "concurrency_race_safety": 0.25,
+          "invariant_stress_test": 0.0
+        },
+        "feedback": {
+          "happy_path": "PASS: Sequential events applied cleanly with correct state and version tracking.",
+          "edge_case_1_boundary": "FAIL: Failed to reject whitespace idempotency_key",
+          "edge_case_2_recovery": "FAIL: Expected STALE_IGNORED for lower ts, got APPLIED",
+          "concurrency_race_safety": "PASS: 30-thread race barrier executed safely: exactly 1 APPLIED, 29 DUPLICATE.",
+          "invariant_stress_test": "FAIL: Entity ent_0 final applied version 0 != expected 18"
+        },
+        "passed": false
+      },
+      "task_02": {
+        "task_id": "task_02",
+        "total_score": 0.65,
+        "sub_scores": {
+          "happy_path": 0.0,
+          "edge_case_1_boundary": 0.2,
+          "edge_case_2_recovery": 0.0,
+          "concurrency_race_safety": 0.25,
+          "invariant_stress_test": 0.2
+        },
+        "feedback": {
+          "happy_path": "FAIL: Write failed: {'success': False, 'reason': 'STALE_TOKEN'}",
+          "edge_case_1_boundary": "PASS: Boundary conditions, argument validation, and expiration semantics verified.",
+          "edge_case_2_recovery": "FAIL: Valid write rejected: {'success': False, 'reason': 'STALE_TOKEN'}",
+          "concurrency_race_safety": "PASS: 20-thread barrier race at expiry boundary produced exactly 1 winner with monotonic token.",
+          "invariant_stress_test": "PASS: Fencing tokens strictly monotonic and storage guard invariants held across all rounds."
+        },
+        "passed": false
+      },
+      "task_03": {
+        "task_id": "task_03",
+        "total_score": 0.0,
+        "sub_scores": {
+          "happy_path": 0.0,
+          "edge_case_1_boundary": 0.0,
+          "edge_case_2_recovery": 0.0,
+          "concurrency_race_safety": 0.0,
+          "invariant_stress_test": 0.0
+        },
+        "feedback": {
+          "happy_path": "ERROR: Exception during happy_path: NameError: name 'deque' is not defined\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_03.py\", line 39, in test_happy_path\n    res = asyncio.run(run())\n          ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\runners.py\", line 195, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\base_events.py\", line 691, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_03.py\", line 30, in run\n    return await fn(\n           ^^^^^^^^^\n  File \"<string>\", line 15, in process_batches\nNameError: name 'deque' is not defined\n",
+          "edge_case_1_boundary": "ERROR: Exception during edge_case_1_boundary: NameError: name 'deque' is not defined\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_03.py\", line 78, in test_edge_case_1_boundary\n    res = asyncio.run(run())\n          ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\runners.py\", line 195, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\base_events.py\", line 691, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_03.py\", line 69, in run\n    return await fn(\n           ^^^^^^^^^\n  File \"<string>\", line 15, in process_batches\nNameError: name 'deque' is not defined\n",
+          "edge_case_2_recovery": "ERROR: Exception during edge_case_2_recovery: NameError: name 'deque' is not defined\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_03.py\", line 116, in test_edge_case_2_recovery\n    res1 = asyncio.run(run1())\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\runners.py\", line 195, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\base_events.py\", line 691, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_03.py\", line 107, in run1\n    return await fn(\n           ^^^^^^^^^\n  File \"<string>\", line 15, in process_batches\nNameError: name 'deque' is not defined\n",
+          "concurrency_race_safety": "ERROR: Exception during concurrency_race_safety: NameError: name 'deque' is not defined\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_03.py\", line 183, in test_concurrency_race_safety\n    res = asyncio.run(run())\n          ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\runners.py\", line 195, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\base_events.py\", line 691, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_03.py\", line 174, in run\n    return await fn(\n           ^^^^^^^^^\n  File \"<string>\", line 15, in process_batches\nNameError: name 'deque' is not defined\n",
+          "invariant_stress_test": "ERROR: Exception during invariant_stress_test: NameError: name 'deque' is not defined\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_03.py\", line 219, in test_invariant_stress_test\n    res, elapsed = asyncio.run(run())\n                   ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\runners.py\", line 195, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\asyncio\\base_events.py\", line 691, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_03.py\", line 208, in run\n    res = await fn(\n          ^^^^^^^^^\n  File \"<string>\", line 15, in process_batches\nNameError: name 'deque' is not defined\n"
+        },
+        "passed": false
+      },
+      "task_04": {
+        "task_id": "task_04",
+        "total_score": 0.0,
+        "sub_scores": {
+          "happy_path": 0.0,
+          "edge_case_1_boundary": 0.0,
+          "edge_case_2_recovery": 0.0,
+          "concurrency_race_safety": 0.0,
+          "invariant_stress_test": 0.0
+        },
+        "feedback": {
+          "happy_path": "ERROR: Exception during happy_path: NameError: name 'threading' is not defined\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_04.py\", line 14, in test_happy_path\n    outbox = cls(max_attempts=3)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 7, in __init__\nNameError: name 'threading' is not defined. Did you forget to import 'threading'\n",
+          "edge_case_1_boundary": "ERROR: Exception during edge_case_1_boundary: NameError: name 'threading' is not defined\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_04.py\", line 40, in test_edge_case_1_boundary\n    outbox = cls(max_attempts=3)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 7, in __init__\nNameError: name 'threading' is not defined. Did you forget to import 'threading'\n",
+          "edge_case_2_recovery": "ERROR: Exception during edge_case_2_recovery: NameError: name 'threading' is not defined\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_04.py\", line 78, in test_edge_case_2_recovery\n    outbox = cls(max_attempts=3)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 7, in __init__\nNameError: name 'threading' is not defined. Did you forget to import 'threading'\n",
+          "concurrency_race_safety": "ERROR: Exception during concurrency_race_safety: NameError: name 'threading' is not defined\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_04.py\", line 122, in test_concurrency_race_safety\n    outbox = cls(max_attempts=3)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 7, in __init__\nNameError: name 'threading' is not defined. Did you forget to import 'threading'\n",
+          "invariant_stress_test": "ERROR: Exception during invariant_stress_test: NameError: name 'threading' is not defined\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_04.py\", line 178, in test_invariant_stress_test\n    outbox = cls(max_attempts=3)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 7, in __init__\nNameError: name 'threading' is not defined. Did you forget to import 'threading'\n"
+        },
+        "passed": false
+      },
+      "task_05": {
+        "task_id": "task_05",
+        "total_score": 0.0,
+        "sub_scores": {},
+        "feedback": {
+          "import_or_syntax_error": "name 'client_id' is not defined"
+        },
+        "passed": false
+      },
+      "task_06": {
+        "task_id": "task_06",
+        "total_score": 0.0,
+        "sub_scores": {
+          "happy_path": 0.0,
+          "edge_case_1_boundary": 0.0,
+          "edge_case_2_recovery": 0.0,
+          "concurrency_race_safety": 0.0,
+          "invariant_stress_test": 0.0
+        },
+        "feedback": {
+          "happy_path": "ERROR: Exception during happy_path: NameError: name 'threading' is not defined\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_06.py\", line 13, in test_happy_path\n    sched = cls()\n            ^^^^^\n  File \"<string>\", line 3, in __init__\nNameError: name 'threading' is not defined. Did you forget to import 'threading'\n",
+          "edge_case_1_boundary": "ERROR: Exception during edge_case_1_boundary: NameError: name 'threading' is not defined\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_06.py\", line 56, in test_edge_case_1_boundary\n    sched = cls()\n            ^^^^^\n  File \"<string>\", line 3, in __init__\nNameError: name 'threading' is not defined. Did you forget to import 'threading'\n",
+          "edge_case_2_recovery": "ERROR: Exception during edge_case_2_recovery: NameError: name 'threading' is not defined\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_06.py\", line 104, in test_edge_case_2_recovery\n    sched = cls()\n            ^^^^^\n  File \"<string>\", line 3, in __init__\nNameError: name 'threading' is not defined. Did you forget to import 'threading'\n",
+          "concurrency_race_safety": "ERROR: Exception during concurrency_race_safety: NameError: name 'threading' is not defined\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_06.py\", line 147, in test_concurrency_race_safety\n    sched = cls()\n            ^^^^^\n  File \"<string>\", line 3, in __init__\nNameError: name 'threading' is not defined. Did you forget to import 'threading'\n",
+          "invariant_stress_test": "ERROR: Exception during invariant_stress_test: NameError: name 'threading' is not defined\nTraceback (most recent call last):\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\base_grader.py\", line 47, in grade\n    passed, msg = test_fn(target_module)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Samarth Mahajan\\Desktop\\micro1-eval-bench\\grader\\grade_task_06.py\", line 186, in test_invariant_stress_test\n    sched = cls()\n            ^^^^^\n  File \"<string>\", line 3, in __init__\nNameError: name 'threading' is not defined. Did you forget to import 'threading'\n"
+        },
+        "passed": false
+      }
+    },
+    "average_score": 0.175
+  }
+}
