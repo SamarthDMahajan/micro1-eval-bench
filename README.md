@@ -27,7 +27,7 @@ Every task is evaluated under a deterministic **5-bucket partial credit schema**
 
 A complete video walkthrough demonstrating the architecture, the 6 reference implementations, the multi-threaded grader harness, and live evaluation runs against OpenRouter frontier models is available here:
 
-🎥 **[DistQueue-Eval Walkthrough Video](https://loom.com/share/distqueue-eval-walkthrough)** *(Loom recording link placeholder)*
+🎥 **[DistQueue-Eval Walkthrough Video](https://drive.google.com/file/d/1uoqBQfi9AN-k_VF52wgM0o1YG1aPRxdc/view?usp=sharing)**
 
 ---
 
